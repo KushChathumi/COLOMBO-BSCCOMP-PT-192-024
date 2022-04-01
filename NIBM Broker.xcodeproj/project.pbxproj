@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CE172AFA818B40A90E25578 /* Pods_NIBM_BrokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FA8101980E53A1FD072473 /* Pods_NIBM_BrokerTests.framework */; };
+		ADA0C4EB3A4F528B73A1B02C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE51A95E58B313C4B67DF6C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework */; };
 		D3EB060227F705BC008D2C25 /* NIBM_BrokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */; };
 		D3EB060427F705BC008D2C25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB060327F705BC008D2C25 /* ContentView.swift */; };
 		D3EB060627F705BD008D2C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3EB060527F705BD008D2C25 /* Assets.xcassets */; };
@@ -14,6 +16,14 @@
 		D3EB061327F705BD008D2C25 /* NIBM_BrokerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB061227F705BD008D2C25 /* NIBM_BrokerTests.swift */; };
 		D3EB061D27F705BD008D2C25 /* NIBM_BrokerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB061C27F705BD008D2C25 /* NIBM_BrokerUITests.swift */; };
 		D3EB061F27F705BD008D2C25 /* NIBM_BrokerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB061E27F705BD008D2C25 /* NIBM_BrokerUITestsLaunchTests.swift */; };
+		D3EB062C27F705E4008D2C25 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3EB062B27F705E4008D2C25 /* Launch Screen.storyboard */; };
+		D3EB063127F70B75008D2C25 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB063027F70B75008D2C25 /* HomeViewModel.swift */; };
+		D3EB063327F70BC7008D2C25 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB063227F70BC7008D2C25 /* Item.swift */; };
+		D3EB063527F70BFA008D2C25 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB063427F70BFA008D2C25 /* Home.swift */; };
+		D3EB063727F70C1F008D2C25 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB063627F70C1F008D2C25 /* ItemView.swift */; };
+		D3EB063927F70D36008D2C25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3EB063827F70D36008D2C25 /* GoogleService-Info.plist */; };
+		D3EB063C27F712F1008D2C25 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3EB063B27F712F1008D2C25 /* SDWebImageSwiftUI */; };
+		EF1434A96243D021A1B495A5 /* Pods_NIBM_Broker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E08BA3500C912033D47AB8D /* Pods_NIBM_Broker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B44E94DA32DB13A4AFDED63 /* Pods-NIBM BrokerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM BrokerTests.release.xcconfig"; path = "Target Support Files/Pods-NIBM BrokerTests/Pods-NIBM BrokerTests.release.xcconfig"; sourceTree = "<group>"; };
+		47FA8101980E53A1FD072473 /* Pods_NIBM_BrokerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_BrokerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7E31A458847DF5762E9A3E /* Pods-NIBM BrokerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM BrokerTests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM BrokerTests/Pods-NIBM BrokerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E08BA3500C912033D47AB8D /* Pods_NIBM_Broker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_Broker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F1F2DF10FDB1054FE0BD89 /* Pods-NIBM Broker-NIBM BrokerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Broker-NIBM BrokerUITests.release.xcconfig"; path = "Target Support Files/Pods-NIBM Broker-NIBM BrokerUITests/Pods-NIBM Broker-NIBM BrokerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7843628E1244DB67FC56EE6D /* Pods-NIBM Broker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Broker.release.xcconfig"; path = "Target Support Files/Pods-NIBM Broker/Pods-NIBM Broker.release.xcconfig"; sourceTree = "<group>"; };
+		89252F81EFBA3561BCB96D65 /* Pods-NIBM Broker-NIBM BrokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Broker-NIBM BrokerUITests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Broker-NIBM BrokerUITests/Pods-NIBM Broker-NIBM BrokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B90E419ABEED3649C672F762 /* Pods-NIBM Broker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Broker.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Broker/Pods-NIBM Broker.debug.xcconfig"; sourceTree = "<group>"; };
 		D3EB05FE27F705BC008D2C25 /* NIBM Broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Broker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_BrokerApp.swift; sourceTree = "<group>"; };
 		D3EB060327F705BC008D2C25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +62,13 @@
 		D3EB061827F705BD008D2C25 /* NIBM BrokerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NIBM BrokerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EB061C27F705BD008D2C25 /* NIBM_BrokerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_BrokerUITests.swift; sourceTree = "<group>"; };
 		D3EB061E27F705BD008D2C25 /* NIBM_BrokerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_BrokerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3EB062B27F705E4008D2C25 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D3EB063027F70B75008D2C25 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D3EB063227F70BC7008D2C25 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D3EB063427F70BFA008D2C25 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		D3EB063627F70C1F008D2C25 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		D3EB063827F70D36008D2C25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EEE51A95E58B313C4B67DF6C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_Broker_NIBM_BrokerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB063C27F712F1008D2C25 /* SDWebImageSwiftUI in Frameworks */,
+				EF1434A96243D021A1B495A5 /* Pods_NIBM_Broker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CE172AFA818B40A90E25578 /* Pods_NIBM_BrokerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +93,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA0C4EB3A4F528B73A1B02C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73157BD358EE6C97E791900E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B90E419ABEED3649C672F762 /* Pods-NIBM Broker.debug.xcconfig */,
+				7843628E1244DB67FC56EE6D /* Pods-NIBM Broker.release.xcconfig */,
+				89252F81EFBA3561BCB96D65 /* Pods-NIBM Broker-NIBM BrokerUITests.debug.xcconfig */,
+				75F1F2DF10FDB1054FE0BD89 /* Pods-NIBM Broker-NIBM BrokerUITests.release.xcconfig */,
+				4C7E31A458847DF5762E9A3E /* Pods-NIBM BrokerTests.debug.xcconfig */,
+				0B44E94DA32DB13A4AFDED63 /* Pods-NIBM BrokerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		83A7F7276542B7B60E00D60E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E08BA3500C912033D47AB8D /* Pods_NIBM_Broker.framework */,
+				EEE51A95E58B313C4B67DF6C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework */,
+				47FA8101980E53A1FD072473 /* Pods_NIBM_BrokerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3EB05F527F705BC008D2C25 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +130,8 @@
 				D3EB061127F705BD008D2C25 /* NIBM BrokerTests */,
 				D3EB061B27F705BD008D2C25 /* NIBM BrokerUITests */,
 				D3EB05FF27F705BC008D2C25 /* Products */,
+				73157BD358EE6C97E791900E /* Pods */,
+				83A7F7276542B7B60E00D60E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,10 +148,15 @@
 		D3EB060027F705BC008D2C25 /* NIBM Broker */ = {
 			isa = PBXGroup;
 			children = (
+				D3EB063827F70D36008D2C25 /* GoogleService-Info.plist */,
+				D3EB062F27F70AE1008D2C25 /* ViewModel */,
+				D3EB062E27F70ADC008D2C25 /* Model */,
+				D3EB062D27F70AD5008D2C25 /* View */,
 				D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */,
 				D3EB060327F705BC008D2C25 /* ContentView.swift */,
 				D3EB060527F705BD008D2C25 /* Assets.xcassets */,
 				D3EB060727F705BD008D2C25 /* Preview Content */,
+				D3EB062B27F705E4008D2C25 /* Launch Screen.storyboard */,
 			);
 			path = "NIBM Broker";
 			sourceTree = "<group>";
@@ -127,6 +186,31 @@
 			path = "NIBM BrokerUITests";
 			sourceTree = "<group>";
 		};
+		D3EB062D27F70AD5008D2C25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3EB063427F70BFA008D2C25 /* Home.swift */,
+				D3EB063627F70C1F008D2C25 /* ItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D3EB062E27F70ADC008D2C25 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3EB063227F70BC7008D2C25 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3EB062F27F70AE1008D2C25 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3EB063027F70B75008D2C25 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,15 +218,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3EB062227F705BD008D2C25 /* Build configuration list for PBXNativeTarget "NIBM Broker" */;
 			buildPhases = (
+				7E27122493840285AFE29257 /* [CP] Check Pods Manifest.lock */,
 				D3EB05FA27F705BC008D2C25 /* Sources */,
 				D3EB05FB27F705BC008D2C25 /* Frameworks */,
 				D3EB05FC27F705BC008D2C25 /* Resources */,
+				C4E733F387F49EB54A709575 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "NIBM Broker";
+			packageProductDependencies = (
+				D3EB063B27F712F1008D2C25 /* SDWebImageSwiftUI */,
+			);
 			productName = "NIBM Broker";
 			productReference = D3EB05FE27F705BC008D2C25 /* NIBM Broker.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3EB062527F705BD008D2C25 /* Build configuration list for PBXNativeTarget "NIBM BrokerTests" */;
 			buildPhases = (
+				FBB7E275561C9961C1DC7591 /* [CP] Check Pods Manifest.lock */,
 				D3EB060A27F705BD008D2C25 /* Sources */,
 				D3EB060B27F705BD008D2C25 /* Frameworks */,
 				D3EB060C27F705BD008D2C25 /* Resources */,
@@ -169,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3EB062827F705BD008D2C25 /* Build configuration list for PBXNativeTarget "NIBM BrokerUITests" */;
 			buildPhases = (
+				66E3020F9C9B34BF881078F4 /* [CP] Check Pods Manifest.lock */,
 				D3EB061427F705BD008D2C25 /* Sources */,
 				D3EB061527F705BD008D2C25 /* Frameworks */,
 				D3EB061627F705BD008D2C25 /* Resources */,
+				84B541036B003D243CB1282D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +307,9 @@
 				Base,
 			);
 			mainGroup = D3EB05F527F705BC008D2C25;
+			packageReferences = (
+				D3EB063A27F712F1008D2C25 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = D3EB05FF27F705BC008D2C25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,7 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB062C27F705E4008D2C25 /* Launch Screen.storyboard in Resources */,
 				D3EB060927F705BD008D2C25 /* Preview Assets.xcassets in Resources */,
+				D3EB063927F70D36008D2C25 /* GoogleService-Info.plist in Resources */,
 				D3EB060627F705BD008D2C25 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,12 +349,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		66E3020F9C9B34BF881078F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NIBM Broker-NIBM BrokerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E27122493840285AFE29257 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NIBM Broker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84B541036B003D243CB1282D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NIBM Broker-NIBM BrokerUITests/Pods-NIBM Broker-NIBM BrokerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NIBM Broker-NIBM BrokerUITests/Pods-NIBM Broker-NIBM BrokerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NIBM Broker-NIBM BrokerUITests/Pods-NIBM Broker-NIBM BrokerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4E733F387F49EB54A709575 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NIBM Broker/Pods-NIBM Broker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NIBM Broker/Pods-NIBM Broker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NIBM Broker/Pods-NIBM Broker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB7E275561C9961C1DC7591 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NIBM BrokerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3EB05FA27F705BC008D2C25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3EB063327F70BC7008D2C25 /* Item.swift in Sources */,
+				D3EB063727F70C1F008D2C25 /* ItemView.swift in Sources */,
 				D3EB060427F705BC008D2C25 /* ContentView.swift in Sources */,
+				D3EB063527F70BFA008D2C25 /* Home.swift in Sources */,
+				D3EB063127F70B75008D2C25 /* HomeViewModel.swift in Sources */,
 				D3EB060227F705BC008D2C25 /* NIBM_BrokerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +617,7 @@
 		};
 		D3EB062327F705BD008D2C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B90E419ABEED3649C672F762 /* Pods-NIBM Broker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,9 +627,11 @@
 				DEVELOPMENT_TEAM = L7D52YQP4M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(DEVELOPMENT_LANGUAGE)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,6 +649,7 @@
 		};
 		D3EB062427F705BD008D2C25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7843628E1244DB67FC56EE6D /* Pods-NIBM Broker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,9 +659,11 @@
 				DEVELOPMENT_TEAM = L7D52YQP4M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(DEVELOPMENT_LANGUAGE)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +681,7 @@
 		};
 		D3EB062627F705BD008D2C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C7E31A458847DF5762E9A3E /* Pods-NIBM BrokerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +702,7 @@
 		};
 		D3EB062727F705BD008D2C25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B44E94DA32DB13A4AFDED63 /* Pods-NIBM BrokerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +723,7 @@
 		};
 		D3EB062927F705BD008D2C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89252F81EFBA3561BCB96D65 /* Pods-NIBM Broker-NIBM BrokerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +742,7 @@
 		};
 		D3EB062A27F705BD008D2C25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F1F2DF10FDB1054FE0BD89 /* Pods-NIBM Broker-NIBM BrokerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -585,6 +799,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3EB063A27F712F1008D2C25 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3EB063B27F712F1008D2C25 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3EB063A27F712F1008D2C25 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3EB05F627F705BC008D2C25 /* Project object */;
 }
