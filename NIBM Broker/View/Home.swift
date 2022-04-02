@@ -26,15 +26,6 @@ struct Home: View {
                 }
                 
                 HStack(spacing: 15){
-//
-//                Button(action: {}, label:{
-//
-//                        Image(systemName: "Logo")
-//                            .font(.title)
-//                            .foregroundColor(Color("Pink"))
-//                })
-                    
-                    
                     Text(HomeModel.userLocation == nil ? "Locating..." : "Current Location")
                         .foregroundColor(.black)
                     

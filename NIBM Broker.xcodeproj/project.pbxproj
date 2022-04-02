@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8CE172AFA818B40A90E25578 /* Pods_NIBM_BrokerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47FA8101980E53A1FD072473 /* Pods_NIBM_BrokerTests.framework */; };
 		ADA0C4EB3A4F528B73A1B02C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE51A95E58B313C4B67DF6C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework */; };
+		D368CB6B27F7FB9B00E730AC /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368CB6A27F7FB9B00E730AC /* Signin.swift */; };
 		D3EB060227F705BC008D2C25 /* NIBM_BrokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */; };
 		D3EB060427F705BC008D2C25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB060327F705BC008D2C25 /* ContentView.swift */; };
 		D3EB060627F705BD008D2C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3EB060527F705BD008D2C25 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		7843628E1244DB67FC56EE6D /* Pods-NIBM Broker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Broker.release.xcconfig"; path = "Target Support Files/Pods-NIBM Broker/Pods-NIBM Broker.release.xcconfig"; sourceTree = "<group>"; };
 		89252F81EFBA3561BCB96D65 /* Pods-NIBM Broker-NIBM BrokerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Broker-NIBM BrokerUITests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Broker-NIBM BrokerUITests/Pods-NIBM Broker-NIBM BrokerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B90E419ABEED3649C672F762 /* Pods-NIBM Broker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Broker.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Broker/Pods-NIBM Broker.debug.xcconfig"; sourceTree = "<group>"; };
+		D368CB6A27F7FB9B00E730AC /* Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
 		D3EB05FE27F705BC008D2C25 /* NIBM Broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Broker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_BrokerApp.swift; sourceTree = "<group>"; };
 		D3EB060327F705BC008D2C25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				D3EB063427F70BFA008D2C25 /* Home.swift */,
 				D3EB063627F70C1F008D2C25 /* ItemView.swift */,
+				D368CB6A27F7FB9B00E730AC /* Signin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				D3EB063727F70C1F008D2C25 /* ItemView.swift in Sources */,
 				D3EB060427F705BC008D2C25 /* ContentView.swift in Sources */,
 				D3EB063527F70BFA008D2C25 /* Home.swift in Sources */,
+				D368CB6B27F7FB9B00E730AC /* Signin.swift in Sources */,
 				D3EB063127F70B75008D2C25 /* HomeViewModel.swift in Sources */,
 				D3EB060227F705BC008D2C25 /* NIBM_BrokerApp.swift in Sources */,
 			);
