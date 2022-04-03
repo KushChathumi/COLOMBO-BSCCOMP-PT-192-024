@@ -75,22 +75,22 @@ struct Signin: View {
                         Text("Login")
                             .font(Font.custom("Vardana", size: 25))
                             .foregroundColor(Color.cyan)
-                            .frame(width: 175, height: 50)
+                            .frame(width: 165, height: 50)
                             .background(Color.white)
                     })
                         .cornerRadius(25)
                     //.padding()
                     
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Register")
-                            .font(Font.custom("Vardana", size: 25))
-                            .foregroundColor(Color.white)
-                            .frame(width: 175, height: 50)
-                            .background(Color.cyan)
-                    })
-                        .cornerRadius(25)
+                    NavigationLink(destination: SginUpView(),
+                                   label: {
+                                       Text("Register")
+                                           .font(Font.custom("Vardana", size: 25))
+                                           .foregroundColor(Color.white)
+                                           .frame(width: 165, height: 50)
+                                           .background(Color.cyan)
+                                           .cornerRadius(25)
+                                   })
+//                        .navigationBarHidden(true)
                 }
                 
                 HStack(alignment: .center, spacing: 5){
@@ -125,8 +125,9 @@ struct Signin: View {
             .background(
               LinearGradient(gradient: Gradient(colors: [.white, .cyan]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all))
-            
+    
         }
+        //.padding(.top, 100.0)
       
     }
     
