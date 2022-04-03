@@ -44,14 +44,20 @@ struct Signin: View {
     var body: some View {
         NavigationView {
             VStack (alignment: .center, spacing: 20){
-                Image("Logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 150, height: 100)
+//                Image("Logo")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 150, height: 100)
                 
                 Text("NIBM Broker")
                     .foregroundColor(Color.blue)
                     .font(Font.custom("Noteworthy", size: 30))
+                    .bold()
+                    .padding()
+                
+                Text("Sign in to continue")
+                    .foregroundColor(Color.black)
+                    .font(Font.custom("papyrus", size: 20))
                     .bold()
                     .padding()
   
@@ -99,9 +105,14 @@ struct Signin: View {
                             .font(Font.custom("Vardana", size: 20))
                             .foregroundColor(Color.white)
                     }
-                    Button(action: {
-                        
-                    }, label: {
+//                    Button(action: {
+//
+//                    }, label: {
+//                        Text("Click Here!")
+//                            .font(Font.custom("Vardana", size: 20))
+//                            .foregroundColor(Color.blue)
+//                    })
+                    NavigationLink(destination: ForgotPaswordView(), label: {
                         Text("Click Here!")
                             .font(Font.custom("Vardana", size: 20))
                             .foregroundColor(Color.blue)
