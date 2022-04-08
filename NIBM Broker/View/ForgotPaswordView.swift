@@ -44,19 +44,21 @@ struct ForgotPaswordView: View {
                     .padding()
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(20)
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text("Change Password")
-                        //.font(Font.custom("Vardana", size: 25))
-                        .foregroundColor(Color.cyan)
-                        .frame(width: 330, height: 50)
-                        .background(Color.white)
-                })
-                    .cornerRadius(20)
+         
             }
             .padding([.leading, .trailing], 27.5)
+            
+            
+            Button(action: {
+                
+            }, label: {
+                Text("Change Password")
+                    //.font(Font.custom("Vardana", size: 25))
+                    .foregroundColor(Color.cyan)
+                    .frame(width: 200, height: 50)
+                    .background(Color.white)
+            })
+                .cornerRadius(20)
             Spacer()
         }
         .background(

@@ -20,8 +20,10 @@ struct NIBM_BrokerApp: App {
             //Home()
             Signin()
               .environmentObject(viewModel)
+
+//            SginUpView()
             
-            //SginUpView()
+//            SettingsView()
         }
     }
 }

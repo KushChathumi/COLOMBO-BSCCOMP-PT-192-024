@@ -21,14 +21,14 @@ struct SginUpView: View {
         @EnvironmentObject var viewModel: AppViewModel
 
         var body: some View {
+            
                 VStack (alignment: .center, spacing: 18){
-                    
                     Text("Sign Up")
                        .foregroundColor(Color.blue)
                     .font(Font.custom("Noteworthy", size: 30))
                       .bold()
 
-                    
+                    ScrollView {
                     VStack{
                         VStack (alignment: .leading, spacing: 8) {
 
@@ -88,8 +88,10 @@ struct SginUpView: View {
                             .background(Color.white)
                             .cornerRadius(20)
                     })
+                    }
                     Spacer()
                 }
+                    
                 .background(
                   LinearGradient(gradient: Gradient(colors: [.white, .cyan]), startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.all))

@@ -43,23 +43,19 @@ struct Signin: View {
 
     var body: some View {
         NavigationView {
-            VStack (alignment: .center, spacing: 20){
-//                Image("Logo")
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: 150, height: 100)
+            VStack{
+                VStack (alignment: .center, spacing: 5){
+                    Text("NIBM Broker")
+                        .foregroundColor(Color.blue)
+                        .font(Font.custom("Noteworthy", size: 30))
+                        .bold()
+                        .padding()
                 
-                Text("NIBM Broker")
-                    .foregroundColor(Color.blue)
-                    .font(Font.custom("Noteworthy", size: 30))
-                    .bold()
-                    .padding()
-                
-                Text("Sign in to continue")
-                    .foregroundColor(Color.black)
-                    .font(Font.custom("papyrus", size: 20))
-                    .bold()
-                    .padding()
+                    Text("Sign in to continue")
+                        .foregroundColor(Color.black)
+                        .font(Font.custom("papyrus", size: 20))
+                        .bold()
+                        .padding()
   
                 VStack (alignment: .leading, spacing: 15) {
                     TextField("Email Address", text: $email)
@@ -71,34 +67,41 @@ struct Signin: View {
                         .padding()
                         .background(Color(.secondarySystemBackground))
                         .cornerRadius(15)
-                }
-                .padding([.leading, .trailing], 27.5)
-                
-                HStack(alignment: .center, spacing: 5) {
-                    Button(action: {
-                        
-                    }, label: {
-                        Text("Login")
-                            .font(Font.custom("Vardana", size: 25))
-                            .foregroundColor(Color.cyan)
-                            .frame(width: 165, height: 50)
-                            .background(Color.white)
-                    })
-                        .cornerRadius(25)
-                    //.padding()
                     
-                    NavigationLink(destination: SginUpView(),
-                                   label: {
-                                       Text("Register")
-                                           .font(Font.custom("Vardana", size: 25))
-                                           .foregroundColor(Color.white)
-                                           .frame(width: 165, height: 50)
-                                           .background(Color.cyan)
-                                           .cornerRadius(25)
-                                   })
-//                        .navigationBarHidden(true)
+                    HStack(alignment: .center, spacing: 5) {
+                        Button(action: {
+                            
+                        }, label: {
+                            Text("Login")
+                                .font(Font.custom("Vardana", size: 25))
+                                .foregroundColor(Color.cyan)
+                                .frame(width: 145, height: 50)
+                                .background(Color.white)
+                               // .padding()
+                        })
+                            .cornerRadius(25)
+                        //.padding()
+                        
+                        NavigationLink(destination: SginUpView(),
+                                       label: {
+                                           Text("Register")
+                                               .font(Font.custom("Vardana", size: 25))
+                                               .foregroundColor(Color.white)
+                                               .frame(width: 145, height: 50)
+                                               .background(Color.cyan)
+                                               .cornerRadius(25)
+                                              // .padding()
+                                       })
+    //                        .navigationBarHidden(true)
+                    }
+                    .padding()
+                    
                 }
+                .autocapitalization(.none)
+                //.padding([.leading, .trailing], 27.5)
+                .padding()
                 
+               
                 HStack(alignment: .center, spacing: 5){
                 label: do {
                         Text("Forget Your Password")
@@ -118,6 +121,7 @@ struct Signin: View {
                             .foregroundColor(Color.blue)
                     })
                 }
+                }
                 .padding()
                 
                 Spacer()
@@ -131,6 +135,7 @@ struct Signin: View {
                             .font(Font.custom("Vardana", size: 15))
                             .foregroundColor(Color.white)
                     })
+                    .padding()
                 
             }
             .background(
@@ -147,5 +152,6 @@ struct Signin: View {
 struct Signin_Previews: PreviewProvider {
     static var previews: some View {
         Signin()
+.previewInterfaceOrientation(.portrait)
     }
 }
