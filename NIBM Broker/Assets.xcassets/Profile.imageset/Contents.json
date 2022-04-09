@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "Jem-final-profile-pic-circle2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "80-805068_my-profile-icon-blank-profile-picture-circle-clipart.png.jpeg",
+      "filename" : "Jem-final-profile-pic-circle2-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Jem-final-profile-pic-circle2-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

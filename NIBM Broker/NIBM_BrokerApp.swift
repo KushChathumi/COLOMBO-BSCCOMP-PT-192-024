@@ -18,10 +18,10 @@ struct NIBM_BrokerApp: App {
             
             let viewModel = AppViewModel()
             //Home()
-            Signin()
-              .environmentObject(viewModel)
+//            Signin()
+//              .environmentObject(viewModel)
 
-//            SginUpView()
+            MainView()
             
 //            SettingsView()
         }

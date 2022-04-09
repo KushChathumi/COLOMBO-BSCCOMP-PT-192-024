@@ -11,9 +11,11 @@
 		ADA0C4EB3A4F528B73A1B02C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE51A95E58B313C4B67DF6C /* Pods_NIBM_Broker_NIBM_BrokerUITests.framework */; };
 		D32B755427F98E7300937FFB /* ForgotPaswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B755327F98E7300937FFB /* ForgotPaswordView.swift */; };
 		D32B755627F9DAAA00937FFB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B755527F9DAAA00937FFB /* SettingsView.swift */; };
-		D32B755827F9E5DA00937FFB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B755727F9E5DA00937FFB /* ProfileView.swift */; };
 		D3315B5A27F92E7500C834C0 /* SginUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3315B5927F92E7500C834C0 /* SginUpView.swift */; };
 		D368CB6B27F7FB9B00E730AC /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368CB6A27F7FB9B00E730AC /* Signin.swift */; };
+		D376CDB528004BB500E20A76 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376CDB428004BB500E20A76 /* MainView.swift */; };
+		D376CDB7280054FA00E20A76 /* CreateItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376CDB6280054FA00E20A76 /* CreateItemView.swift */; };
+		D376CDB92800728900E20A76 /* HomeAutorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376CDB82800728900E20A76 /* HomeAutorizedView.swift */; };
 		D3EB060227F705BC008D2C25 /* NIBM_BrokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */; };
 		D3EB060427F705BC008D2C25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB060327F705BC008D2C25 /* ContentView.swift */; };
 		D3EB060627F705BD008D2C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3EB060527F705BD008D2C25 /* Assets.xcassets */; };
@@ -59,9 +61,11 @@
 		B90E419ABEED3649C672F762 /* Pods-NIBM Broker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Broker.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Broker/Pods-NIBM Broker.debug.xcconfig"; sourceTree = "<group>"; };
 		D32B755327F98E7300937FFB /* ForgotPaswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPaswordView.swift; sourceTree = "<group>"; };
 		D32B755527F9DAAA00937FFB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		D32B755727F9E5DA00937FFB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D3315B5927F92E7500C834C0 /* SginUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SginUpView.swift; sourceTree = "<group>"; };
 		D368CB6A27F7FB9B00E730AC /* Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
+		D376CDB428004BB500E20A76 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D376CDB6280054FA00E20A76 /* CreateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemView.swift; sourceTree = "<group>"; };
+		D376CDB82800728900E20A76 /* HomeAutorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAutorizedView.swift; sourceTree = "<group>"; };
 		D3EB05FE27F705BC008D2C25 /* NIBM Broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Broker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_BrokerApp.swift; sourceTree = "<group>"; };
 		D3EB060327F705BC008D2C25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -205,7 +209,9 @@
 				D3315B5927F92E7500C834C0 /* SginUpView.swift */,
 				D32B755327F98E7300937FFB /* ForgotPaswordView.swift */,
 				D32B755527F9DAAA00937FFB /* SettingsView.swift */,
-				D32B755727F9E5DA00937FFB /* ProfileView.swift */,
+				D376CDB428004BB500E20A76 /* MainView.swift */,
+				D376CDB6280054FA00E20A76 /* CreateItemView.swift */,
+				D376CDB82800728900E20A76 /* HomeAutorizedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -477,11 +483,13 @@
 				D3EB060427F705BC008D2C25 /* ContentView.swift in Sources */,
 				D3EB063527F70BFA008D2C25 /* Home.swift in Sources */,
 				D3315B5A27F92E7500C834C0 /* SginUpView.swift in Sources */,
+				D376CDB7280054FA00E20A76 /* CreateItemView.swift in Sources */,
+				D376CDB92800728900E20A76 /* HomeAutorizedView.swift in Sources */,
 				D32B755627F9DAAA00937FFB /* SettingsView.swift in Sources */,
 				D368CB6B27F7FB9B00E730AC /* Signin.swift in Sources */,
+				D376CDB528004BB500E20A76 /* MainView.swift in Sources */,
 				D3EB063127F70B75008D2C25 /* HomeViewModel.swift in Sources */,
 				D32B755427F98E7300937FFB /* ForgotPaswordView.swift in Sources */,
-				D32B755827F9E5DA00937FFB /* ProfileView.swift in Sources */,
 				D3EB060227F705BC008D2C25 /* NIBM_BrokerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
