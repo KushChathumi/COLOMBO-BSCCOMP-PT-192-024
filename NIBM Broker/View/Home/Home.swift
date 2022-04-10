@@ -13,7 +13,6 @@ struct Home: View {
     
     var body: some View {
         
-
             VStack(spacing: 10){
                 HStack (alignment: .center, spacing: 0){
                           Text("NIBM Broker")
@@ -66,9 +65,8 @@ struct Home: View {
                         ForEach(HomeModel.items){item in
                             //Text(item.item_type)
                             ItemView(item: item)
-                                .frame(width: UIScreen.main.bounds.width - 30)
+                                .frame(width: UIScreen.main.bounds.width - 10)
                         }
-                        
                     }
                 })
                 
@@ -87,4 +85,4 @@ struct Home_Previews: PreviewProvider {
         Home()
     }
 }
-
+ 

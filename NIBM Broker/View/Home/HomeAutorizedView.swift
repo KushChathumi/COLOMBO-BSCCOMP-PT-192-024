@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeAutorizedView: View {
+    
     var body: some View {
         
         VStack{
@@ -16,11 +17,11 @@ struct HomeAutorizedView: View {
                     .font(Font.custom("Noteworthy", size: 35))
                     .bold()
                     .foregroundColor(Color.white)
-                
+
                 Spacer(minLength: 0)
-                
+
                 Button(action:{
-                    
+
                 } ){
                     Text("Log Out")
                         .foregroundColor(.cyan)
@@ -32,9 +33,11 @@ struct HomeAutorizedView: View {
             }
             .padding()
             .background(Color.cyan)
-            Spacer(minLength: 0)
-        }
 
+            Spacer(minLength: 0)
+
+            Divider()
+            }
     }
 }
 

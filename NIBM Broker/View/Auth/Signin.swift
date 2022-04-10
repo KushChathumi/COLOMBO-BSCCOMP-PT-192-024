@@ -38,6 +38,7 @@ class AppViewModel: ObservableObject {
 struct Signin: View {
     @State var email = ""
     @State var password = ""
+    @State var show = false
     
     @EnvironmentObject var viewModel: AppViewModel
 
@@ -58,29 +59,30 @@ struct Signin: View {
                         .padding()
   
                 VStack (alignment: .leading, spacing: 15) {
-                    TextField("Email Address", text: $email)
-                        .padding()
+                    TextField("User Name", text: $email)
+                        .frame(width: 325, height: 50)
+                        .padding(.trailing,10)
+                    //.padding(.leading,10)
                         .background(Color(.secondarySystemBackground))
                         .cornerRadius(15)
                     
                     SecureField("Password", text: $password)
-                        .padding()
+                        .frame(width: 325, height: 50)
+                        .padding(.trailing,10)
                         .background(Color(.secondarySystemBackground))
                         .cornerRadius(15)
                     
                     HStack(alignment: .center, spacing: 5) {
                         Button(action: {
-                            
+                            self.show.toggle()
                         }, label: {
                             Text("Login")
                                 .font(Font.custom("Vardana", size: 25))
                                 .foregroundColor(Color.cyan)
                                 .frame(width: 145, height: 50)
                                 .background(Color.white)
-                               // .padding()
                         })
                             .cornerRadius(25)
-                        //.padding()
                         
                         NavigationLink(destination: SginUpView(),
                                        label: {
@@ -90,31 +92,24 @@ struct Signin: View {
                                                .frame(width: 145, height: 50)
                                                .background(Color.cyan)
                                                .cornerRadius(25)
-                                              // .padding()
                                        })
-    //                        .navigationBarHidden(true)
                     }
                     .padding()
-                    
                 }
                 .autocapitalization(.none)
-                //.padding([.leading, .trailing], 27.5)
                 .padding()
                 
-               
+                .fullScreenCover(isPresented: self.$show){
+                    MainView()
+                }
+                    
                 HStack(alignment: .center, spacing: 5){
                 label: do {
                         Text("Forget Your Password")
                             .font(Font.custom("Vardana", size: 20))
                             .foregroundColor(Color.white)
                     }
-//                    Button(action: {
-//
-//                    }, label: {
-//                        Text("Click Here!")
-//                            .font(Font.custom("Vardana", size: 20))
-//                            .foregroundColor(Color.blue)
-//                    })
+
                     NavigationLink(destination: ForgotPaswordView(), label: {
                         Text("Click Here!")
                             .font(Font.custom("Vardana", size: 20))

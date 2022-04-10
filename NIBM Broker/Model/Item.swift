@@ -11,10 +11,11 @@ struct Item: Identifiable {
     
     var id: String
     var item_type: String
-    var item_cost: NSNumber
-    var item_size: NSNumber
+    var item_cost: String
+    var item_size: String
     var item_image: String
     var item_district: String
     var item_town: String
+    //var contact : NSNumber
 }
 

@@ -82,11 +82,12 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
                 
                 let id = doc.documentID
                 let type = doc.get("item_type") as! String
-                let cost = doc.get("item_cost") as! NSNumber
-                let size = doc.get("item_size") as! NSNumber
+                let cost = doc.get("item_cost") as! String
+                let size = doc.get("item_size") as! String
                 let image = doc.get("item_image") as! String
                 let district = doc.get("item_district") as! String
                 let town = doc.get("item_town") as! String
+                //let contact = doc.get("contact") as! NSNumber
                 
                 return Item(id: id, item_type: type, item_cost: cost, item_size: size, item_image: image, item_district: district, item_town: town)
             })
