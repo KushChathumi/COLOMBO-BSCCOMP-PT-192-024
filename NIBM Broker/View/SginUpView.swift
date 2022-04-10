@@ -38,6 +38,12 @@ struct SginUpView: View {
                                 .cornerRadius(20)
                                 .disableAutocorrection(true)
                             
+                            TextField("Gender", text: $nic)
+                                .padding()
+                                .background(Color(.secondarySystemBackground))
+                                .cornerRadius(20)
+                                .disableAutocorrection(true)
+                            
                             TextField("NIC Number", text: $dob)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
