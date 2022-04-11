@@ -11,12 +11,13 @@ import SDWebImageSwiftUI
 struct ItemView: View {
     
     var item: Item
+    
     @State var show = false
     
     var body: some View {
         VStack{
             ZStack{
-                
+                 
                 VStack(alignment: .leading){
                     //Downloading Image from Web..
                     

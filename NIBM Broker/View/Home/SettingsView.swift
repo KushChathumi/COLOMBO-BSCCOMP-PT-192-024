@@ -12,7 +12,8 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var index = 0
     @State var show = false
-    
+    @State var rp = false
+     
     var body: some View {
         VStack{
             HStack(spacing: 15){
@@ -93,6 +94,7 @@ struct SettingsView: View {
                 
                 Button(action: {
                     self.index = 1
+                    self.rp.toggle()
                 }){
                     Text("Change Password")
                         .foregroundColor(self.index == 1 ? Color.white : .gray)
@@ -110,6 +112,11 @@ struct SettingsView: View {
             .shadow(color: Color.white.opacity(0.5), radius: 5, x: -8, y: -8)
             .padding(.horizontal)
             .padding(.top,25)
+
+            .sheet(isPresented: self.$rp){
+                ForgotPaswordView()
+                
+            }
             
             Spacer(minLength: 0)
             

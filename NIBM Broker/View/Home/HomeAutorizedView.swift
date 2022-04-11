@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeAutorizedView: View {
     
+    @StateObject var HomeModel = HomeViewModel()
+    
     var body: some View {
         
         VStack{
@@ -33,16 +35,26 @@ struct HomeAutorizedView: View {
             }
             .padding()
             .background(Color.cyan)
-
-            Spacer(minLength: 0)
-
-            Divider()
+                                
+            VStack{
+                ScrollView(.vertical, showsIndicators: false, content: {
+                    
+                    VStack(spacing: 25){
+                        
+                        ForEach(HomeModel.items){item in
+                            //Text(item.item_type)
+                            HomeItem(item: item)
+                                .frame(width: UIScreen.main.bounds.width - 10)
+                        }
+                    }
+                })
             }
-    }
-}
-
-struct HomeAutorizedView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeAutorizedView()
+            .padding()
+            Spacer(minLength: 0)
+            .onAppear(perform: {
+                //Calling location delegate
+                HomeModel.locationManager.delegate = HomeModel
+            })
+        }
     }
 }

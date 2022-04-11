@@ -14,7 +14,7 @@ struct MainView: View {
                 .tabItem{
                     Label("Home", systemImage: "house.fill")
                 }
-            CreateItemView()
+            MainItemView()
                 .tabItem{
                     Label("Ads", systemImage: "plus.square.on.square.fill")
                 }
