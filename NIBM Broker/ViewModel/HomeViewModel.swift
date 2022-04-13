@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import CoreLocation
 import Firebase
+import CoreLocation
 
 //Fetching User Location
 class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{

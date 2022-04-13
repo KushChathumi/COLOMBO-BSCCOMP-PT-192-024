@@ -69,7 +69,7 @@ struct Home: View {
                         }
                     }
                 })
-                
+                    .padding()
             }
             
         .onAppear(perform: {

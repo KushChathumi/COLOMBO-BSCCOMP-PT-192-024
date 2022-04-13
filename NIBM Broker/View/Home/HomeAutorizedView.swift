@@ -50,6 +50,9 @@ struct HomeAutorizedView: View {
                 })
             }
             .padding()
+            
+            Divider()
+            
             Spacer(minLength: 0)
             .onAppear(perform: {
                 //Calling location delegate
