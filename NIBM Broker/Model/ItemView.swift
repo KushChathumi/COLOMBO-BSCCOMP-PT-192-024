@@ -7,12 +7,16 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Firebase
+import FirebaseStorage
 
 struct ItemView: View {
     
     var item: Item
     
     @State var show = false
+    @State var retriveImage = [UIImage]()
+    @State var retrievedImages = [UIImage]()
     
     var body: some View {
         VStack{
@@ -44,6 +48,18 @@ struct ItemView: View {
             .fullScreenCover(isPresented: self.$show){
                 Signin()
             }
+            
+            VStack{
+                ForEach(retrievedImages, id:\.self){ image in
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                }
+            }
+            .onAppear{
+                self.retrieveData()
+            }
+            
             HStack(alignment: .firstTextBaseline, spacing: 5){
                 Text(item.item_district)
                     //.font(.title)
@@ -59,6 +75,43 @@ struct ItemView: View {
                    // .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.black)
+            }
+        }
+    }
+    
+    func retrieveData(){
+        //Get data from DB
+        let db = Firestore.firestore()
+        // GEt the data in storage
+        db.collection("Items").getDocuments { (snap, err) in
+            if err == nil && snap != nil {
+                var paths = [String]()
+                
+                for doc in snap!.documents {
+                    //Extract the file path
+                    paths.append(doc["item_image"] as! String)
+                }
+                //Loop through each file path and fetch the data from storage
+                for path in paths{
+                    // get a reference to storage
+                    let storageRef = Storage.storage().reference()
+                    
+                    // specify the path
+                    let fileRef = storageRef.child(path)
+                    
+                    // retrieve data
+                    fileRef.getData(maxSize: 5*1024*1024) { data, err in
+                        if err == nil && data != nil {
+                            // Create UIImage and piut into array
+                            
+                            if let image = UIImage(data: data!){
+                                DispatchQueue.main.async {
+                                    retrievedImages.append(image)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

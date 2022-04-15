@@ -6,17 +6,25 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseStorage
 
 struct CreateItemView: View {
+    
+    @ObservedObject var model = Item_ViewModel()
     
     @State var show = false
     @State var isPickerShowing = false
     @State var selecetdImage: UIImage?
-    @State var price = ""
-    @State var type = ""
-    @State var size = ""
-    @State var district = ""
-    @State var location = ""
+    @State var item_type = ""
+    @State var item_cost = ""
+    @State var item_size = ""
+    @State var item_district = ""
+    @State var item_town = ""
+    @State var item_image = ""
+    @State var item_contact = ""
+    
+    
     
     var body: some View {
         VStack{
@@ -78,35 +86,42 @@ struct CreateItemView: View {
                             ItemViewModel(selectedImage: $selecetdImage, isPickerShowing: $isPickerShowing)
                         }
 
-                        TextField("Price (Per perch)", text: $price)
+                        TextField("Price (Per perch)", text: $item_cost)
                             .frame(width: 325, height: 40)
                             .padding(.leading,10)
                             //.background(Color(.secondarySystemBackground))
                             .background(Color.white)
                              .cornerRadius(5)
                         
-                        TextField("Land/House", text: $type)
+                        TextField("Land/House", text: $item_type)
                             .frame(width: 325, height: 40)
                             .padding(.leading,10)
                             //.background(Color(.secondarySystemBackground))
                             .background(Color.white)
                             .cornerRadius(5)
                         
-                        TextField("Land size (No of Perch)", text: $size)
+                        TextField("Land size (No of Perch)", text: $item_size)
                             .frame(width: 325, height: 40)
                             .padding(.leading,10)
                             //.background(Color(.secondarySystemBackground))
                             .background(Color.white)
                             .cornerRadius(5)
                         
-                        TextField("District", text: $district)
+                        TextField("District", text: $item_district)
                             .frame(width: 325, height: 40)
                             .padding(.leading,10)
                             //.background(Color(.secondarySystemBackground))
                             .background(Color.white)
                             .cornerRadius(5)
                         
-                        TextField("location", text: $location)
+                        TextField("location", text: $item_town)
+                            .frame(width: 325, height: 40)
+                            .padding(.leading,10)
+                            //.background(Color(.secondarySystemBackground))
+                            .background(Color.white)
+                            .cornerRadius(5)
+                        
+                        TextField("Contact Number", text: $item_contact)
                             .frame(width: 325, height: 40)
                             .padding(.leading,10)
                             //.background(Color(.secondarySystemBackground))
@@ -126,7 +141,9 @@ struct CreateItemView: View {
                             })
                             
                             Button(action: {
-                                
+                               // uploadImage()
+                                model.addData(item_type: item_type, item_cost: item_cost, item_size: item_size, item_district: item_district, item_town: item_town, item_image: item_image, item_contact: item_contact)
+                                clearFormField()
                             }, label: {
                                 Text("Add")
                                     .font(Font.custom("Vardana", size: 20))
@@ -150,13 +167,44 @@ struct CreateItemView: View {
     
     private func clearFormField() {
 
-        price = ""
-        type = ""
-        size = ""
-        district = ""
-        location = ""
+        item_type = ""
+        item_cost = ""
+        item_size = ""
+        item_district = ""
+        item_town = ""
         }
+    
+//    func uploadImage(){
+//        guard selecetdImage != nil else {
+//            return
+//        }
+//        //Creaet storage reference
+//        let storageRef = Storage.storage().reference()
+//        // turn image into data
+//        let imageData = selecetdImage!.jpegData(compressionQuality: 0.8)
+//
+//        guard imageData != nil else {
+//            return
+//        }
+//        //specify the file path and name
+//
+//        //let path = "items/\(UUID().uuidString).jpg"
+//        let path = "\(UUID().uuidString).webp"
+//        let fileRef = storageRef.child(path)
+//
+//        // Upload thata data
+//
+//        let UploadTask = fileRef.putData(imageData!, metadata: nil) { metadata, error in
+//            if error == nil && metadata != nil{
+//                let db = Firestore.firestore()
+//                db.collection("Items").document().setData(["item_image":path])
+//
+//            }
+//        }
+//        // save a reference to the file in firebase db
+//    }
 }
+
 
 struct CreateItemView_Previews: PreviewProvider {
     static var previews: some View {

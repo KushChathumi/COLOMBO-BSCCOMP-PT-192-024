@@ -11,6 +11,7 @@ struct HomeAutorizedView: View {
     
     @StateObject var HomeModel = HomeViewModel()
     
+    
     var body: some View {
         
         VStack{

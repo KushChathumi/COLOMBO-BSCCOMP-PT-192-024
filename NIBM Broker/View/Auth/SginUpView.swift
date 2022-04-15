@@ -9,9 +9,12 @@ import SwiftUI
 
 struct SginUpView: View {
     
+    @ObservedObject var userModel = UserViewModel()
+    
     @State var nic = ""
     @State var dob = ""
     @State var name = ""
+    @State var gender = ""
     @State var mobile = ""
     @State var email = ""
     @State var password = ""
@@ -38,7 +41,7 @@ struct SginUpView: View {
                                 .cornerRadius(20)
                                 .disableAutocorrection(true)
                             
-                            TextField("Gender", text: $nic)
+                            TextField("Gender", text: $gender)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
@@ -86,6 +89,11 @@ struct SginUpView: View {
                     
                     Button(action: {
                         
+                        userModel.addData(nic: nic, dob: dob, name: name,gender: gender, mobile: mobile, email: email, password: password, location: location)
+                        clearFormField()
+                        
+                        
+                        
                     }, label: {
                         Text("Register")
                             .font(Font.custom("Vardana", size: 25))
@@ -103,8 +111,19 @@ struct SginUpView: View {
                     .edgesIgnoringSafeArea(.all))
                 
             }
-        
-        }
+    
+    private func clearFormField() {
+        nic = ""
+        dob = ""
+        name = ""
+        gender = ""
+        mobile = ""
+        email = ""
+        password = ""
+        cPassword = ""
+        location = ""
+    }
+}
     
 
 

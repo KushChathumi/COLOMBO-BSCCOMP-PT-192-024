@@ -8,10 +8,11 @@
 import SwiftUI
 import Firebase
 import CoreLocation
+import FirebaseStorage
 
 //Fetching User Location
 class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
-    
+        
     @Published var locationManager = CLLocationManager()
     @Published var search = ""
     
@@ -71,9 +72,9 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     }
     
     func fetchData(){
-        
+        //Get data from DB
         let db = Firestore.firestore()
-        
+        // GEt the data in storage 
         db.collection("Items").getDocuments { (snap, err) in
             
             guard let itemData = snap else{return}
