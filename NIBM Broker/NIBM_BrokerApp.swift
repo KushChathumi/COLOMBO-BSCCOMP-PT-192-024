@@ -17,8 +17,9 @@ struct NIBM_BrokerApp: App {
     var body: some Scene {
         WindowGroup {
             
-            let viewModel = AppViewModel()
+            let viewModel = SignInViewModel()
             Home()
+//                .environmentObject(viewModel)
 //            Signin()
 //              .environmentObject(viewModel)
 

@@ -6,42 +6,15 @@
 //
 
 import SwiftUI
-import FirebaseAuth
-
-class AppViewModel: ObservableObject {
-    
-    let auth = Auth.auth()
-    
-    var isSignIn: Bool{
-        return auth.currentUser != nil
-    }
-    
-    func signIn(email: String, password: String){
-        auth.signIn(withEmail: email, password: password) { result, error in
-            guard result != nil, error ==  nil else{
-                return
-            }
-            //Success
-        }
-    }
-    
-    func signUp(email: String, password: String){
-        auth.createUser(withEmail: email, password: password) { result, error in
-            guard result != nil, error ==  nil else{
-                return
-            }
-            //Success
-        }
-    }
-}
+import Firebase
 
 struct Signin: View {
-    @State var email = ""
-    @State var password = ""
+    
+    @StateObject private var registerVM = SignUpViewModel()
+    
     @State var show = false
     
-    @EnvironmentObject var viewModel: AppViewModel
-
+    
     var body: some View {
         NavigationView {
             VStack{
@@ -59,14 +32,14 @@ struct Signin: View {
                         .padding()
   
                 VStack (alignment: .leading, spacing: 15) {
-                    TextField("User Name", text: $email)
+                    TextField("User Name", text: $registerVM.email)
                         .frame(width: 325, height: 50)
                         .padding(.trailing,10)
                     //.padding(.leading,10)
                         .background(Color(.secondarySystemBackground))
                         .cornerRadius(15)
                     
-                    SecureField("Password", text: $password)
+                    SecureField("Password", text: $registerVM.password)
                         .frame(width: 325, height: 50)
                         .padding(.trailing,10)
                         .background(Color(.secondarySystemBackground))
@@ -74,8 +47,7 @@ struct Signin: View {
                     
                     HStack(alignment: .center, spacing: 5) {
                         Button(action: {
-                            self.show.toggle()
-   
+                            registerVM.loginUser()
                         }, label: {
                             Text("Login")
                                 .font(Font.custom("Vardana", size: 25))
@@ -84,7 +56,7 @@ struct Signin: View {
                                 .background(Color.white)
                         })
                             .cornerRadius(25)
-                        
+            
                         NavigationLink(destination: SginUpView(),
                                        label: {
                                            Text("Register")
@@ -141,8 +113,7 @@ struct Signin: View {
         }
         //.padding(.top, 100.0)
       
-    }
-    
+    }    
 }
 
 struct Signin_Previews: PreviewProvider {

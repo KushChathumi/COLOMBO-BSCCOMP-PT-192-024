@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SginUpView: View {
+    
+    @StateObject private var registerVM = SignUpViewModel()
     
     @ObservedObject var userModel = UserViewModel()
     
@@ -21,7 +24,7 @@ struct SginUpView: View {
     @State var cPassword = ""
     @State var location = ""
         
-        @EnvironmentObject var viewModel: AppViewModel
+        @EnvironmentObject var viewModel: SignInViewModel
 
         var body: some View {
             
@@ -62,12 +65,12 @@ struct SginUpView: View {
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
                             
-                            TextField("Email Address", text: $email)
+                            TextField("Email Address", text: $registerVM.email)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
                             
-                            SecureField("Password", text: $password)
+                            SecureField("Password", text: $registerVM.password)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
@@ -88,12 +91,10 @@ struct SginUpView: View {
                     
                     
                     Button(action: {
-                        
-                        userModel.addData(nic: nic, dob: dob, name: name,gender: gender, mobile: mobile, email: email, password: password, location: location)
-                        clearFormField()
-                        
-                        
-                        
+                        //register()
+                        registerVM.register()
+                        userModel.addData(nic: nic, dob: dob, name: name,gender: gender, mobile: mobile, email: registerVM.email, password: registerVM.password, location: location)
+                    
                     }, label: {
                         Text("Register")
                             .font(Font.custom("Vardana", size: 25))
@@ -109,6 +110,9 @@ struct SginUpView: View {
                 .background(
                   LinearGradient(gradient: Gradient(colors: [.white, .cyan]), startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.all))
+                .onAppear{
+                
+                }
                 
             }
     
@@ -122,6 +126,16 @@ struct SginUpView: View {
         password = ""
         cPassword = ""
         location = ""
+    }
+    
+    private func register(){
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("Failed to create user: ", error.localizedDescription)
+            }else {
+                print("Successfully created user : \(result?.user.uid ?? "")")
+            }
+        }
     }
 }
     
