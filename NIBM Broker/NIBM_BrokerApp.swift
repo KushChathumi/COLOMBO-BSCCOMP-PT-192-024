@@ -17,13 +17,14 @@ struct NIBM_BrokerApp: App {
     var body: some Scene {
         WindowGroup {
             
-            let viewModel = SignInViewModel()
+            let viewModel = SignUpViewModel()
             Home()
 //                .environmentObject(viewModel)
 //            Signin()
 //              .environmentObject(viewModel)
 
 //            CreateItemView()
+//            MainView()
         }
     }
 }

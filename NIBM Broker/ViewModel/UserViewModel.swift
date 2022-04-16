@@ -13,13 +13,13 @@ class UserViewModel: ObservableObject {
     
     @Published var list = [User]()
     
-    func addData(nic: String, dob: String, name: String, gender: String, mobile: String, email: String, password: String, location: String){
+    func addData(nic: String, dob: NSDate, name: String, gender: String, mobile: String, email: String, password: String, location: String){
         
         let db = Firestore.firestore()
         
         db.collection("Users").addDocument(data: ["nic": nic, "dob": dob, "name": name,"gender": gender, "mobile": mobile, "email": email, "password": password, "location": location]) { error in
             if error == nil {
-                self.getData()
+                //self.getData()
             }else {
                 
             }
@@ -37,7 +37,7 @@ class UserViewModel: ObservableObject {
                         self.list = snapshot.documents.map { d in
                             return User(id: d.documentID,
                                         nic: d["nic"] as? String ?? "",
-                                        dob: d["dob"] as? String ?? "",
+                                        dob: d["dob"] as! String,
                                         name: d["name"] as? String ?? "",
                                         gender: d["gender"] as? String ?? "",
                                         mobile: d["mobile"] as? String ?? "",

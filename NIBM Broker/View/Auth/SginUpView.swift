@@ -15,7 +15,7 @@ struct SginUpView: View {
     @ObservedObject var userModel = UserViewModel()
     
     @State var nic = ""
-    @State var dob = ""
+    @State var dob = Date()
     @State var name = ""
     @State var gender = ""
     @State var mobile = ""
@@ -38,7 +38,7 @@ struct SginUpView: View {
                     VStack{
                         VStack (alignment: .leading, spacing: 8) {
 
-                            TextField("Name", text: $nic)
+                            TextField("Name", text: $name)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
@@ -50,12 +50,12 @@ struct SginUpView: View {
                                 .cornerRadius(20)
                                 .disableAutocorrection(true)
                             
-                            TextField("NIC Number", text: $dob)
+                            TextField("NIC Number", text: $nic)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
                             
-                            TextField("Date of Birth", text: $name)
+                            DatePicker(selection: $dob, in: ...Date(), displayedComponents: .date, label: {Text("Date of Birth")})
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
@@ -88,12 +88,11 @@ struct SginUpView: View {
                         }
                         .padding([.leading, .trailing], 27.5)
                     }
-                    
-                    
+ 
                     Button(action: {
                         //register()
                         registerVM.register()
-                        userModel.addData(nic: nic, dob: dob, name: name,gender: gender, mobile: mobile, email: registerVM.email, password: registerVM.password, location: location)
+                        userModel.addData(nic: nic, dob: dob as NSDate, name: name,gender: gender, mobile: mobile, email: registerVM.email, password: registerVM.password, location: location)
                     
                     }, label: {
                         Text("Register")
@@ -118,7 +117,6 @@ struct SginUpView: View {
     
     private func clearFormField() {
         nic = ""
-        dob = ""
         name = ""
         gender = ""
         mobile = ""

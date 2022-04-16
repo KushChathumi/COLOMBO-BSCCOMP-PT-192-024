@@ -48,6 +48,8 @@ struct Signin: View {
                     HStack(alignment: .center, spacing: 5) {
                         Button(action: {
                             registerVM.loginUser()
+
+                            
                         }, label: {
                             Text("Login")
                                 .font(Font.custom("Vardana", size: 25))

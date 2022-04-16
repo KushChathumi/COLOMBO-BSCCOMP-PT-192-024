@@ -20,12 +20,12 @@ class SignUpViewModel: ObservableObject{
     
     
     func register(){
-        Auth.auth().createUser(withEmail: email, password: password) { [self] result, error in
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 print("Failed to create user: ", error.localizedDescription)
             }else {
                 print("Successfully created user : \(result?.user.uid ?? "")")
-                HomeAutorizedView()
+                
             }
         }
     }
