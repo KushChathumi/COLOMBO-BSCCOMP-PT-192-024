@@ -13,8 +13,7 @@ struct Signin: View {
     @StateObject private var registerVM = SignUpViewModel()
     
     @State var show = false
-    
-    
+
     var body: some View {
         NavigationView {
             VStack{
@@ -48,8 +47,7 @@ struct Signin: View {
                     HStack(alignment: .center, spacing: 5) {
                         Button(action: {
                             registerVM.loginUser()
-
-                            
+                            self.show.toggle()
                         }, label: {
                             Text("Login")
                                 .font(Font.custom("Vardana", size: 25))
@@ -70,6 +68,9 @@ struct Signin: View {
                                        })
                     }
                     .padding()
+                    .fullScreenCover(isPresented: self.$show) {
+                        MainView()
+                    }
                 }
                 .autocapitalization(.none)
                 .padding()
@@ -115,7 +116,7 @@ struct Signin: View {
         }
         //.padding(.top, 100.0)
       
-    }    
+    }
 }
 
 struct Signin_Previews: PreviewProvider {

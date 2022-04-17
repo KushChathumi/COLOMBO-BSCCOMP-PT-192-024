@@ -7,12 +7,14 @@
 
 import SwiftUI
 import Firebase
+import CoreLocation
 
 struct SginUpView: View {
     
     @StateObject private var registerVM = SignUpViewModel()
-    
+    @State var manager = CLLocationManager()
     @ObservedObject var userModel = UserViewModel()
+    @StateObject private var HomeModel = HomeViewModel()
     
     @State var nic = ""
     @State var dob = Date()
@@ -23,6 +25,8 @@ struct SginUpView: View {
     @State var password = ""
     @State var cPassword = ""
     @State var location = ""
+    
+    @State var show = false
         
         @EnvironmentObject var viewModel: SignInViewModel
 
@@ -50,6 +54,20 @@ struct SginUpView: View {
                                 .cornerRadius(20)
                                 .disableAutocorrection(true)
                             
+//                                Picker(selection: $gender, label: Text("Gender")) {
+//                                    //Text("Gender").tag(1)
+//                                    Text("Male").tag(1)
+//                                    Text("Female").tag(2)
+//                                }
+//                                .padding()
+//                                .foregroundColor(Color.gray)
+//                                .frame(width: 335, alignment: .leading)
+//                                .background(Color(.secondarySystemBackground))
+//                                .cornerRadius(20)
+//                                .disableAutocorrection(true)
+                           
+                            
+                            
                             TextField("NIC Number", text: $nic)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
@@ -65,6 +83,7 @@ struct SginUpView: View {
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
                             
+                            
                             TextField("Email Address", text: $registerVM.email)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
@@ -74,17 +93,22 @@ struct SginUpView: View {
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
+                                .ignoresSafeArea(.keyboard, edges: .bottom)
                             
                             SecureField("Confirm Password", text: $cPassword)
                                 .padding()
                                 .background(Color(.secondarySystemBackground))
                                 .cornerRadius(20)
+                                .ignoresSafeArea(.keyboard, edges: .bottom)
                             
-                            TextField("Current Location", text: $location)
-                                .padding()
-                                .background(Color(.secondarySystemBackground))
-                                .cornerRadius(20)
-                            
+                            HStack(spacing: 15){
+                                Text(HomeModel.userLocation == nil ? "Locating..." : "Current Location")
+                                Text(HomeModel.userAddress)
+                                Spacer(minLength: 0)
+                            }
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                            .cornerRadius(20)
                         }
                         .padding([.leading, .trailing], 27.5)
                     }
@@ -92,8 +116,11 @@ struct SginUpView: View {
                     Button(action: {
                         //register()
                         registerVM.register()
-                        userModel.addData(nic: nic, dob: dob as NSDate, name: name,gender: gender, mobile: mobile, email: registerVM.email, password: registerVM.password, location: location)
-                    
+                        
+                        userModel.addData(nic: nic, dob: dob as NSDate, name: name,gender: gender, mobile: mobile, email: registerVM.email, password: registerVM.password, location: HomeModel.userAddress)
+                        
+                        clearFormField()
+                        
                     }, label: {
                         Text("Register")
                             .font(Font.custom("Vardana", size: 25))
@@ -107,12 +134,11 @@ struct SginUpView: View {
                 }
                     
                 .background(
-                  LinearGradient(gradient: Gradient(colors: [.white, .cyan]), startPoint: .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.all))
-                .onAppear{
-                
-                }
-                
+                  LinearGradient(gradient: Gradient(colors: [.white, .cyan]), startPoint: .top, endPoint: .bottom))
+                .onAppear(perform: {
+                    //Calling location delegate
+                    HomeModel.locationManager.delegate = HomeModel
+                })
             }
     
     private func clearFormField() {
@@ -126,15 +152,15 @@ struct SginUpView: View {
         location = ""
     }
     
-    private func register(){
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error = error {
-                print("Failed to create user: ", error.localizedDescription)
-            }else {
-                print("Successfully created user : \(result?.user.uid ?? "")")
-            }
-        }
-    }
+//    private func register(){
+//        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+//            if let error = error {
+//                print("Failed to create user: ", error.localizedDescription)
+//            }else {
+//                print("Successfully created user : \(result?.user.uid ?? "")")
+//            }
+//        }
+//    }
 }
     
 

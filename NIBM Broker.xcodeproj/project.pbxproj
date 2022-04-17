@@ -22,6 +22,8 @@
 		D376CDB7280054FA00E20A76 /* CreateItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376CDB6280054FA00E20A76 /* CreateItemView.swift */; };
 		D376CDB92800728900E20A76 /* HomeAutorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376CDB82800728900E20A76 /* HomeAutorizedView.swift */; };
 		D37EA3F82802A62E00965B68 /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37EA3F72802A62E00965B68 /* HomeItem.swift */; };
+		D3BC2E68280BC19000715759 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC2E67280BC19000715759 /* Authentication.swift */; };
+		D3BC2E6A280BD04200715759 /* ViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BC2E69280BD04200715759 /* ViewContent.swift */; };
 		D3C6161428083641002C8C99 /* Advertisment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6161328083641002C8C99 /* Advertisment.swift */; };
 		D3DB3A0C280707DA001C23DB /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DB3A0B280707DA001C23DB /* ItemViewModel.swift */; };
 		D3EB060227F705BC008D2C25 /* NIBM_BrokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */; };
@@ -79,6 +81,8 @@
 		D376CDB6280054FA00E20A76 /* CreateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemView.swift; sourceTree = "<group>"; };
 		D376CDB82800728900E20A76 /* HomeAutorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAutorizedView.swift; sourceTree = "<group>"; };
 		D37EA3F72802A62E00965B68 /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		D3BC2E67280BC19000715759 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		D3BC2E69280BD04200715759 /* ViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContent.swift; sourceTree = "<group>"; };
 		D3C6161328083641002C8C99 /* Advertisment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisment.swift; sourceTree = "<group>"; };
 		D3DB3A0B280707DA001C23DB /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		D3EB05FE27F705BC008D2C25 /* NIBM Broker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Broker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +208,7 @@
 				D3EB062E27F70ADC008D2C25 /* Model */,
 				D3EB062D27F70AD5008D2C25 /* View */,
 				D3EB060127F705BC008D2C25 /* NIBM_BrokerApp.swift */,
+				D3BC2E69280BD04200715759 /* ViewContent.swift */,
 				D3EB060527F705BD008D2C25 /* Assets.xcassets */,
 				D3EB060727F705BD008D2C25 /* Preview Content */,
 				D3EB062B27F705E4008D2C25 /* Launch Screen.storyboard */,
@@ -265,6 +270,7 @@
 				D34695062809D6530028239C /* UserViewModel.swift */,
 				D33C4279280A7A2200D655B7 /* SignUpViewModel.swift */,
 				D33C427D280A928300D655B7 /* SignInViewModel.swift */,
+				D3BC2E67280BC19000715759 /* Authentication.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -529,7 +535,9 @@
 				D376CDB92800728900E20A76 /* HomeAutorizedView.swift in Sources */,
 				D32B755627F9DAAA00937FFB /* SettingsView.swift in Sources */,
 				D3DB3A0C280707DA001C23DB /* ItemViewModel.swift in Sources */,
+				D3BC2E68280BC19000715759 /* Authentication.swift in Sources */,
 				D368CB6B27F7FB9B00E730AC /* Signin.swift in Sources */,
+				D3BC2E6A280BD04200715759 /* ViewContent.swift in Sources */,
 				D376CDB528004BB500E20A76 /* MainView.swift in Sources */,
 				D3EB063127F70B75008D2C25 /* HomeViewModel.swift in Sources */,
 				D32B755427F98E7300937FFB /* ForgotPaswordView.swift in Sources */,
@@ -699,7 +707,7 @@
 				DEVELOPMENT_TEAM = L7D52YQP4M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(DEVELOPMENT_LANGUAGE)";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -731,7 +739,7 @@
 				DEVELOPMENT_TEAM = L7D52YQP4M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "$(DEVELOPMENT_LANGUAGE)";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

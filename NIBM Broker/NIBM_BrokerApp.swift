@@ -12,17 +12,16 @@ import Firebase
 struct NIBM_BrokerApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-   // @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+
     var body: some Scene {
         WindowGroup {
-            
-            let viewModel = SignUpViewModel()
             Home()
-//                .environmentObject(viewModel)
+            
+//            SginUpView()
+
 //            Signin()
 //              .environmentObject(viewModel)
-
+//
 //            CreateItemView()
 //            MainView()
         }
